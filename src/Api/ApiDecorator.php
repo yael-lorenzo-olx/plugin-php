@@ -63,4 +63,13 @@ class ApiDecorator implements HttpClientInterface
     {
         return $this->httpClient->delete($this->urlTranslator->get($uri));
     }
+    
+    /**
+     * @param $uri
+     * @return FluentRequestInterface
+     */
+    public function head($uri)
+    {
+        return $this->httpClient->head($this->urlTranslator->get($uri));
+    }
 }
